@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<script language="javascript" type="text/javascript">
+            function handleButtonClick() {
+            var valueEmail = document.getElementById('email').value;
+            var valuePassword = document.getElementById('password').value
+            androidButton.onCapturedButtonClicked("LoginId:"+valueEmail+"Password:"+valuePassword)
+            }
+
+            function updateFromNative(message)
+            {
+		    document.getElementById("email").value = message;
+            }
+
+        </script>
+
+<html lang="en">
+
+<head>
+    <title>
+        Croods HRMS
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/logo/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/logo/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/logo/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/logo/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/logo/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/logo/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/logo/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/logo/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="/assets/images/logo/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/logo/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/logo/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/images/logo/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Core css -->
+    <link href="/assets/css/responsive.css" rel="stylesheet">
+    <link href="/assets/css/app.min.css" rel="stylesheet">
+    <link href="/assets/vendors/formvalidation/formValidation.min.css" rel="stylesheet">
+
+    <!-- custom css -->
+
+    <link href="/assets/css/custom.css" rel="stylesheet">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
+
+    <!-- page css -->
+
+    <!-- Core css -->
+    <link href="/assets/css/app.min.css" rel="stylesheet">
+    <style type="text/css">
+		.img-fluid {
+			max-width: 100%;
+			height: 35px;
+		}
+
+		a.btn.btn-primary.btn-ton {
+			position: absolute;
+			right: 30px;
+		}
+
+		button.btn.btn-primary {
+			margin-top: 15px;
+		}
+
+
+    </style>
+
+</head>
+
+<body>
+<div class="app">
+    <div class="container-fluid p-h-0 p-v-20 bg full-height d-flex"
+         style="background-image: url('/assets/images/others/login-3.png')">
+        <div class="d-flex flex-column justify-content-between w-100">
+            <div class="container d-flex h-100">
+                <div class="align-items-center w-100">
+                    <div class="col-md-7 col-lg-5 m-h-auto">
+                        <div class="card shadow-lg">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between m-b-30">
+
+                                    <h2 class="m-b-0">Sign In</h2>
+                                </div>
+
+
+                                <form id="loginForm" action="/login" method="post">
+                                    <div class="form-group">
+                                        <label class="font-weight-semibold" for="email">Email
+                                            Address:</label>
+                                        <div class="input-affix">
+                                            <i class="prefix-icon anticon anticon-user"></i>
+                                            <input type="email" class="form-control" id="email"
+                                                   name="email"
+                                                   placeholder="Email"
+                                                   value=""
+                                            >
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="font-weight-semibold"
+                                               for="password">Password:</label>
+                                        <div class="input-affix m-b-10">
+                                            <i class="prefix-icon anticon anticon-lock"></i>
+                                            <input type="password" class="form-control"
+                                                   id="password"
+                                                   name="password" placeholder="Password">
+                                        </div>
+                                        <a class="float-right font-size-13 text-muted"
+                                           href="/forget">Forgot
+                                            Password?</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center justify-content-between">
+
+                                            <button class="btn btn-primary" type="submit" onclick='handleButtonClick();'>Sign In
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <p class="m-b-0">Copyright &#169; 2021 Croods Consolidates. All rights
+                        reserved.</p>
+                    <span>
+      <a href="#" class="text-gray m-r-15">Term &amp; Conditions</a>
+      <a href="#" class="text-gray">Privacy &amp; Policy</a>
+      </span>
+                </div>
+            </footer>
+            <script>
+					var layout = document.getElementsByClassName("layout");
+   //layout.className += "layout is-side-nav-dark";
+   if(layout && layout.length) layout[0].classList.add("is-side-nav-dark");
+
+   var app  = document.getElementsByClassName("app");
+   //app.className += "app is-primary";
+   if(app && app.length) app[0].classList.add("is-primary");
+
+
+            </script>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Core Vendors JS -->
+<script src="/assets/js/vendors.min.js"></script>
+
+<!-- page js -->
+
+<!-- Core JS -->
+<script src="/assets/js/app.min.js"></script>
+
+
+</body>
+
+</html>
